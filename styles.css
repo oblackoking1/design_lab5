@@ -1,0 +1,136 @@
+
+@import url(current_track.css);
+@import url(header.css);
+@import url(main.css);
+@import url(playlist.css);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F7F7F5;
+    font-family: 'Inter', -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+/* ==========================================================================
+   АДАПТИВ: ПЛАНШЕТЫ (до 870px)
+   ========================================================================== */
+@media (max-width: 870px) {
+    /* 1. Шапка: убираем поля 180px, оставляем аккуратные боковые отступы */
+    header {
+        top: 16px;
+        left: 24px;
+        right: 24px;
+    }
+
+    .header__title {
+        font-size: 20px;
+    }
+
+    /* 2. Основной контейнер: меняем боковые поля с 180px на 24px */
+    .main-content {
+        padding-top: 80px;
+        padding-left: 24px;
+        padding-right: 24px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    /* 3. Карточка трека: уменьшаем обложку и отступ до текста */
+    .current-track {
+        padding: 20px;
+    }
+
+    .current-track__cover {
+        width: 180px;
+        height: 180px;
+    }
+
+    .current-track__meta {
+        margin-left: 24px;
+    }
+
+    .current-track__title {
+        font-size: 22px;
+    }
+}
+
+/* ==========================================================================
+   АДАПТИВ: СМАРТФОНЫ (до 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+    /* 1. Компактная шапка на всю ширину с отступами 16px */
+    header {
+        top: 12px;
+        left: 16px;
+        right: 16px;
+        display: flex; /* Не скрываем шапку, чтобы работала навигация */
+    }
+
+    /* На узком экране скрываем текстовое название, оставляя иконку и вкладки */
+    .header__title {
+        display: none;
+    }
+
+    .header__item {
+        font-size: 14px;
+    }
+
+    /* 2. Основной контейнер */
+    .main-content {
+        padding-top: 68px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 32px;
+    }
+
+    .main-content__header__title {
+        font-size: 24px;
+    }
+
+    .main-content__header__paragr {
+        font-size: 14px;
+    }
+
+    /* 3. Перестраиваем карточку плеера в вертикальный столбик */
+    .current-track {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 16px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .current-track__cover {
+        width: 100%;
+        max-width: 240px;
+        height: auto;
+        aspect-ratio: 1 / 1; /* Сохраняет идеальный квадрат при любой ширине */
+    }
+
+    .current-track__meta {
+        margin-left: 0;      /* Убираем десктопный отступ слева */
+        margin-top: 16px;
+        width: 100%;         /* Чтобы прогресс-бар растянулся на всю ширину карточки */
+    }
+
+    .current-track__title {
+        font-size: 20px;
+    }
+
+    /* Центрируем кнопки управления плеером */
+    .pause {
+        justify-content: center;
+    }
+
+    /* 4. Плейлист */
+    .playlist__item {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

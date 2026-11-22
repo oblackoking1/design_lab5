@@ -1,0 +1,90 @@
+.current-track {
+    /* background-color: #ffffff; */
+    display: flex;
+
+    width: 100%;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    /* border-radius: 10px; */
+    flex-direction: row;
+    padding: 24px 24px;
+    align-items: center;
+
+    background-color: rgba(247, 247, 245, 0.72); /* Твой цвет #F7F7F5 с прозрачностью 72% */
+    backdrop-filter: blur(12px);                 /* Размывает всё, что проезжает под шапкой */
+    -webkit-backdrop-filter: blur(12px);         /* Для поддержки Safari и мобильных браузеров */
+    border: 1px solid rgba(255, 255, 255, 0.8);  /* Тонкий световой блик по контуру стекла */
+    border-radius: 12px;                         /* Скругление углов плашки */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);  /* Едва заметная тень для объема */
+}
+
+
+.current-track__cover {
+    width: 256px;
+    height: 256px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+.current-track__meta {
+    margin-left: 40px;
+    flex: 1;
+}
+
+.current-track__paragh {
+    color: #B94615;
+    font-weight: 500;
+    font-size: 11px;
+}
+
+.current-track__title {
+    color: #242421;
+    font-weight: 600;
+    font-size: 28px;
+
+}
+
+.current-track__artist {
+    color: #73736D;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.progress {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Серая подложка всей полоски */
+.progress__bar {
+  width: 100%;
+  height: 6px;
+  background-color: #E7E7E2;
+  border-radius: 999px; /* Делает края идеально круглыми */
+  overflow: hidden;     /* Обрезает внутреннюю полосу по скруглениям */
+  cursor: pointer;
+}
+
+/* Оранжевая заполненная часть */
+.progress__fill {
+  height: 100%;
+  background-color: #B94615;
+  border-radius: 999px;
+}
+
+/* Время слева и справа под полоской */
+.progress__times {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #73736D;
+}
+
+.pause {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-top: 16px;
+    gap: 16px;
+}

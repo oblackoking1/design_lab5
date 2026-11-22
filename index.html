@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="player-app">
+
+
+        <!-- Блок для плейлиста -->
+        <header>
+            <div class="header__left">
+                <img src="sidebar_icon.svg" alt="нет картинки" class="header__icon">
+
+                <h2 class="header__title">Моя медиатека</h2>
+
+            </div>
+
+            <nav class="header__nav">
+
+                <ul class="header__list">
+                    <li class="header__item header__item--active">
+                        Плеер
+                    </li>
+                    <li class="header__item">
+                        Плейлист
+                    </li>
+
+                </ul>
+            </nav>
+
+        </header>
+
+        <!-- Блок для центральной части -->
+
+        <main class="main-content">
+            <section class="main-content__header">
+                <h1 class="main-content__header__title">Включи любимую музыку</h1>
+                <p class="main-content__header__paragr">Любимые треки. Ничего лишнего</p>
+            </section>
+            <section class="current-track">
+                <img src="cover.svg" alt="тут могла быть ваше реклама" class="current-track__cover">
+
+                <div class="current-track__meta">
+                    <p class="current-track__paragh">сейчас играет</p>
+                    <h1 class="current-track__title">Седая ночь</h1>
+                    <p class="current-track__artist">Ласковый май</p>
+                    <!-- прогресс бар -->
+                    <div class="progress">
+                        <div class="progress__bar">
+                            <div class="progress__fill" style="width: 35%;"></div>
+                        </div>
+                        <div class="progress__times">
+                            <span class="progress__current">1:12</span>
+                            <span class="progress__total">6:58</span>
+                        </div>
+                    </div>
+                    <!-- назад - пауза - вперёд -->
+                    <div class="pause">
+                        <img src="return_btn.svg" alt="">
+                        <img src="pause_btn.svg" alt="кнопка паузы">
+                        <img src="alga_btn.svg" alt="">
+                    </div>
+                </div>
+
+            </section>
+            <section class="playlist">
+                <h2 class="playlist__title">Мой плейлист</h2>
+
+                <ul class="playlist__list">
+
+                    <li class="playlist__item playlist-item--active" style="--progress: 40%;">
+                        <span class="playlist__track-name">Седая ночь</span>
+                        <span class="playlist__duration">6:58</span>
+                    </li>
+
+                    <li class="playlist__item">
+                        <span class="playlist__track-name">Я свободен</span>
+                        <span class="playlist__duration">7:13</span>
+                    </li>
+
+                    <li class="playlist__item">
+                        <span class="playlist__track-name">Су буенда учак яна</span>
+                        <span class="playlist__duration">3:21</span>
+                    </li>
+
+                </ul>
+            </section>
+
+        </main>
+
+    </div>
+</body>
+
+</html>

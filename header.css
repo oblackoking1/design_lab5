@@ -1,0 +1,57 @@
+header {
+    position: fixed;
+    top: 32px;
+    left: 180px;
+    right: 180px;
+    height: 48px;
+    width: auto;
+    box-sizing: border-box;
+    padding: 0 20px; /* или 0 поставить, просто балуюсь */
+    margin: 0;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #F7F7F5;
+
+    /* === Эффект глассморфизма === */
+    background-color: rgba(247, 247, 245, 0.72); /* Твой цвет #F7F7F5 с прозрачностью 72% */
+    backdrop-filter: blur(12px);                 /* Размывает всё, что проезжает под шапкой */
+    -webkit-backdrop-filter: blur(12px);         /* Для поддержки Safari и мобильных браузеров */
+    border: 1px solid rgba(255, 255, 255, 0.8);  /* Тонкий световой блик по контуру стекла */
+    border-radius: 12px;                         /* Скругление углов плашки */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);  /* Едва заметная тень для объема */
+}
+
+.header__left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__title {
+    color: #242421;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.header__item {
+    color: #73736D;
+    cursor: pointer;
+}
+
+.header__item--active {
+    color: #B94615;
+    font-weight: bold;
+}

@@ -1,0 +1,66 @@
+.playlist {
+    width: 100%;
+    align-self: flex-start;
+}
+
+.playlist__title {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.playlist__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.playlist__item {
+    position: relative; /* Опора для внутренней штриховки */
+    overflow: hidden;   /* Обрезает штриховку по скруглениям 8px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    /* background-color: #ffffff;
+    border-radius: 8px; */
+    background-color: rgba(247, 247, 245, 0.72); /* Твой цвет #F7F7F5 с прозрачностью 72% */
+    backdrop-filter: blur(12px);                 /* Размывает всё, что проезжает под шапкой */
+    -webkit-backdrop-filter: blur(12px);         /* Для поддержки Safari и мобильных браузеров */
+    border: 1px solid rgba(255, 255, 255, 0.8);  /* Тонкий световой блик по контуру стекла */
+    border-radius: 12px;                         /* Скругление углов плашки */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);  /* Едва заметная тень для объема */
+}
+
+/* Поднимаем текст и время поверх заливки */
+.playlist__track-name,
+.playlist__duration {
+    position: relative;
+    z-index: 1;
+}
+
+/* Стили активного трека (слитно, без пробела!) */
+.playlist__item.playlist-item--active .playlist__track-name {
+    color: #B94615;
+    font-weight: 600;
+}
+
+/* Диагональная штриховка ровно на пройденный процент */
+.playlist__item.playlist-item--active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: var(--progress, 0%);
+    z-index: 0;
+
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(185, 70, 21, 0.08),
+        rgba(185, 70, 21, 0.08) 6px,
+        rgba(185, 70, 21, 0.16) 6px,
+        rgba(185, 70, 21, 0.16) 12px
+    );
+}

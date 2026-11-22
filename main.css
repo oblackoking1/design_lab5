@@ -1,0 +1,35 @@
+.main-content {
+    padding-top: 106px;
+    min-height: 100vh;
+    padding-left: 180px;
+    padding-right: 180px;
+    padding-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    align-items: center;
+
+    font-weight: 600
+}
+
+.main-content__header {
+    text-align: left;
+    align-self: flex-start;
+}
+.main-content__header__title {
+    text-align: left;
+    align-self: flex-start;
+    color: #242421;
+    font-weight: 500;
+    padding: 0;
+}
+
+.main-content__header__paragr {
+    text-align: left;
+    align-self: flex-start;
+    color: #73736D;
+    font-weight: 400;
+    padding: 0%;
+}
